@@ -11,14 +11,15 @@ buttons.forEach((val, index) => {
 
       for (let i = 0; i < images.length; i++) {
         if (images[i].alt !== captlized) {
-          images[i].style.display = "none";
+          images[i].parentElement.style.display = "none";
+        
         } else {
-          images[i].style.display = "block";
+          images[i].parentElement.style.display = "block";
         }
       }
     } else {
       for (let j = 0; j < img_list.children.length; j++) {
-        img_list.children[j].children[0].style.display = "block";
+        img_list.children[j].style.display = "block";
       }
     }
   });
